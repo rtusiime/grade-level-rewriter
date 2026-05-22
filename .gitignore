@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Env / secrets
+.env
+.env.local
+backend/.env
+
+# Logs / runtime artifacts
+*.log
+backend/ab_test_log.csv
+
+# OS
+.DS_Store
