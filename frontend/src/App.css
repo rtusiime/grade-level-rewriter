@@ -132,5 +132,12 @@ pre.final { border-color: var(--accent); }
 .round-head { display: flex; align-items: center; gap: 10px; }
 .feedback { color: var(--muted); margin: 4px 0 6px; font-size: 14px; }
 
+.key-block { border-top: 1px dashed var(--line); padding-top: 16px; margin-top: 8px; }
+.key-row { display: flex; gap: 8px; }
+.key-row input { flex: 1; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.hint { color: var(--muted); font-size: 13px; margin: 6px 0 0; }
+.hint code { background: rgba(127, 127, 127, 0.18); padding: 1px 4px; border-radius: 3px; }
+a { color: var(--accent); }
+
 footer { color: var(--muted); margin-top: 24px; text-align: center; }
 footer code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
