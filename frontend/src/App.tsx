@@ -100,12 +100,20 @@ export default function App() {
 
   return (
     <div className="app">
-      <header>
-        <h1>Grade-Level Rewriter</h1>
-        <p className="sub">
-          Score a reading passage, or rewrite it to a target grade band with a
-          measure-and-iterate loop. Your API key stays in your browser.
-        </p>
+      <header className="brand">
+        <img
+          src={`${import.meta.env.BASE_URL}logo_horizontal_dark.png`}
+          alt="Forge Prep"
+          className="brand-logo"
+        />
+        <div>
+          <h1>Grade-Level Rewriter</h1>
+          <p className="sub">
+            Score a reading passage, or rewrite it to a target grade band with a
+            measure-and-iterate loop. Your API key stays in your browser.
+          </p>
+          <hr className="rule" />
+        </div>
       </header>
 
       <section className="panel">
@@ -272,7 +280,8 @@ function ScoreView({
   return (
     <section className="panel">
       <h2>Score</h2>
-      <p>
+      <hr className="panel-rule" />
+      <p className="summary-line">
         <strong>Grade ({s.method}):</strong> {s.grade.toFixed(1)}
         {" · "}
         <strong>Difficult words:</strong> {s.pctDifficult.toFixed(0)}%
@@ -298,8 +307,9 @@ function LevelView({
   return (
     <section className="panel">
       <h2>Leveling result</h2>
+      <hr className="panel-rule" />
       {result ? (
-        <p>
+        <p className="summary-line">
           <span className={result.passed ? "pill ok" : "pill fail"}>
             {result.passed ? "passed" : "did not converge"}
           </span>{" "}
